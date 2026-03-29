@@ -6,14 +6,16 @@
     <title>blueblueblue</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.12.72/build/spline-viewer.js"
+    ></script>
   </head>
   <body>
-    <h1>Lorem ipsum dolor sit amet.</h1>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloribus
-      labore, consectetur dolor assumenda obcaecati, voluptates repellendus
-      animi quaerat voluptatum aliquam facere voluptatem deserunt quod!
-      Provident laborum voluptatem veritatis sed?
-    </p>
+    <div class="logo-container">
+      <spline-viewer
+        url="https://prod.spline.design/KgZFVpgDiGtijCJ2/scene.splinecode"
+      ></spline-viewer>
+    </div>
   </body>
 </html>

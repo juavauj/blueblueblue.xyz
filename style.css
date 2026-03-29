@@ -6,6 +6,12 @@
 
 * {
   margin: 0;
+  background: linear-gradient(180deg, #002fa7, #0083a7);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
 }
 
 a {
@@ -17,4 +23,67 @@ picture,
 svg {
   max-width: 100%;
   display: block;
+}
+
+body {
+  /* background: linear-gradient(180deg, #002fa7, #0083a7);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite; */
+}
+
+.logo-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* This cuts off anything outside the box */
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+spline-viewer {
+  width: calc(100vw + 70px);
+  height: calc(
+    100vh + 70px
+  ); /* Make the viewer slightly taller than the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
