@@ -1,3 +1,5 @@
+/* Cero */
+
 *,
 *::before,
 *::after {
@@ -25,40 +27,55 @@ svg {
   display: block;
 }
 
-body {
-  /* background: linear-gradient(180deg, #002fa7, #0083a7);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite; */
-}
-
-.logo-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* This cuts off anything outside the box */
-  /* position: relative; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-spline-viewer {
-  width: calc(100vw + 70px);
-  height: calc(
-    100vh + 70px
-  ); /* Make the viewer slightly taller than the container */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* Custom Cursor Bee */
 
 .custom-cursor {
   cursor:
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🐝</text></svg>")
       16 0,
     auto; /*!emojicursor.app*/
+}
+
+/* Logo Landpage */
+
+/* Logo Landpage */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Spans the full width of the screen safely */
+  height: 100vh; /* Ensures the container is as tall as the screen */
+  overflow: hidden;
+
+  @media only screen and (min-width: 992px) {
+    /* background-color: chartreuse; */
+  }
+}
+
+spline-viewer {
+  width: 100vw;
+  height: 100vh;
+
+  transform: translateX(2%);
+
+  @media only screen and (max-width: 768px) {
+    /* 1. Completely detach the canvas from Flexbox so it can't be squished */
+    position: absolute !important;
+
+    /* 2. Force a hard-coded, massive desktop size */
+    width: 1200px !important;
+    max-width: none !important;
+    height: 2000px !important;
+
+    /* 3. Pin it to the dead-center of the screen */
+    left: 50% !important;
+    top: 50% !important;
+
+    /* 4. Shift it perfectly into the middle, THEN scale it down to mobile size */
+    /* If you still need your slight nudge to the right, you can change -50% to -48% */
+    transform: translate(-48%, -50%) scale(0.5) !important;
+  }
 }
 
 @-webkit-keyframes AnimationName {
