@@ -74,7 +74,7 @@ spline-viewer {
 
     /* 4. Shift it perfectly into the middle, THEN scale it down to mobile size */
     /* If you still need your slight nudge to the right, you can change -50% to -48% */
-    transform: translate(-48%, -50%) scale(0.5) !important;
+    transform: translate(-50%, -50%) scale(0.5) !important;
   }
 }
 
